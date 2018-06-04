@@ -6,26 +6,32 @@ public class IK : MonoBehaviour
 {
 	[SerializeField] Segment m_segment = null;
 	[SerializeField] [Range(1, 40)] int m_count = 5;
-	[SerializeField] GameObject m_target = null;
+	[SerializeField] public GameObject m_target = null;
 	[SerializeField] GameObject m_base = null;
 
-	Segment[] m_segments = null;
+	public Segment[] m_segments = null;
 
-	void Start()
+	void Awake()
 	{
 		for (int i = 0; i < m_count; i++)
 		{
-			Instantiate<Segment>(m_segment, transform);
+			Segment s = Instantiate<Segment>(m_segment, transform);
 		}
 
 		m_segments = GetComponentsInChildren<Segment>();
+        //m_segments[0].gameObject.AddComponent<Rigidbody2D>();
 	}
 
 	void Update()
 	{
 		for (int i = 0; i < m_segments.Length; i++)
         {
-            Vector2 target = (i == 0) ? (Vector2)m_target.transform.position : m_segments[i - 1].start;
+            Vector2 target = Vector2.zero;
+            if (m_target != null) 
+                target = (i == 0) ? (Vector2)m_target.transform.position : m_segments[i - 1].start;
+            if (m_target == null)
+                target = m_segments[i].start;
+
             m_segments[i].Follow(target);
         }
 

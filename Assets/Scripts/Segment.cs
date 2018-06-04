@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Segment : MonoBehaviour
 {
-	[SerializeField] [Range(0.0f, 10.0f)] float m_length = 1;
+	[SerializeField] [Range(0.0f, 10.0f)] public float m_length = 1;
 
-	public Vector2 start { get { return transform.position; } set { transform.position = value; } }
+    public Vector2 target { get; set; }
+    public Vector2 start { get { return transform.position; } set { transform.position = value; } }
 	public Vector2 end { get; set; }
 	public float angle { get; set; }
 

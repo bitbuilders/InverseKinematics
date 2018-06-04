@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4106174130575902}
   - component: {fileID: 114456352137424894}
   m_Layer: 0
-  m_Name: Segment
+  m_Name: Segment 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +38,6 @@ GameObject:
   - component: {fileID: 33908326609941090}
   - component: {fileID: 64326821997808502}
   - component: {fileID: 23600021930567580}
-  - component: {fileID: 65504380054383452}
   m_Layer: 0
   m_Name: Quad
   m_TagString: Untagged
@@ -88,7 +87,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 18bfec3188fa7e04181838149ff8c5c0, type: 2}
+  - {fileID: 2100000, guid: c5e02851ac739454a9c8c5c4e31ef6a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -129,18 +128,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65504380054383452
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1331921988624022}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 6.1232336e-17}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114456352137424894
 MonoBehaviour:
   m_ObjectHideFlags: 1
