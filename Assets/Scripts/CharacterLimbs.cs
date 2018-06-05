@@ -36,7 +36,7 @@ public class CharacterLimbs : MonoBehaviour
             for (int i = 0; i < segment.Length; i++)
             {
                 Vector2 target = (i == 0) ? segment[i].target : segment[i - 1].start;
-                segment[i].Follow(target);
+                //segment[i].Follow(target);
             }
         }
 

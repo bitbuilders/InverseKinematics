@@ -20,12 +20,24 @@ public class Segment : MonoBehaviour
 		childTransform.position = position;
 	}
 
-    public void Follow(Vector2 target)
+    public void Follow(Vector2 target, float angleDesired, float prevAngle)
     {
         Vector2 direction = target - start;
+        
         angle = Mathf.Atan2(direction.y, direction.x);
+        if (prevAngle != 0.0f)
+        {
+            float newAngle = prevAngle - angleDesired;
+            print(newAngle);
+            if (prevAngle < -angleDesired)
+                angle = -angleDesired * Mathf.Deg2Rad;
+            if (prevAngle > angleDesired)
+                angle = angleDesired * Mathf.Deg2Rad;
+        }
+
         transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
-        start = target - (direction.normalized * m_length);
+        Vector2 pos = target - (direction.normalized * m_length);
+        start = pos;
     }
 
     public void CalculateEnd()

@@ -146,6 +146,7 @@ MonoBehaviour:
   m_count: 5
   m_target: {fileID: 1253043387}
   m_base: {fileID: 309436132}
+  m_angle: 0
   m_segments: []
 --- !u!4 &309436134
 Transform:
@@ -218,6 +219,7 @@ MonoBehaviour:
   m_count: 3
   m_target: {fileID: 1253043387}
   m_base: {fileID: 350642517}
+  m_angle: 90
   m_segments: []
 --- !u!1 &377265799
 GameObject:
@@ -776,7 +778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 10
   m_craziness: 0.25
-  m_waviness: 2
+  m_waviness: 20
   m_limbs:
   - {fileID: 350642519}
   - {fileID: 1840018592}
@@ -834,6 +836,7 @@ MonoBehaviour:
   m_count: 3
   m_target: {fileID: 1253043387}
   m_base: {fileID: 1036649338}
+  m_angle: 90
   m_segments: []
 --- !u!1 &1039986588
 GameObject:
@@ -932,7 +935,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1520409628901598, guid: 1f4e53200c95baa49b3b6c640155cdea, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f4e53200c95baa49b3b6c640155cdea, type: 2}
@@ -1337,6 +1340,7 @@ MonoBehaviour:
   m_count: 3
   m_target: {fileID: 1253043387}
   m_base: {fileID: 1840018590}
+  m_angle: 90
   m_segments: []
 --- !u!1 &1977153519
 GameObject:
@@ -1370,6 +1374,7 @@ MonoBehaviour:
   m_count: 10
   m_target: {fileID: 1253043387}
   m_base: {fileID: 494782713}
+  m_angle: 0
   m_segments: []
 --- !u!4 &1977153521
 Transform:
@@ -1429,4 +1434,5 @@ MonoBehaviour:
   m_count: 3
   m_target: {fileID: 1253043387}
   m_base: {fileID: 2046937506}
+  m_angle: 90
   m_segments: []

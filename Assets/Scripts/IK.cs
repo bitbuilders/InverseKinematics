@@ -8,8 +8,9 @@ public class IK : MonoBehaviour
 	[SerializeField] [Range(1, 40)] int m_count = 5;
 	[SerializeField] public GameObject m_target = null;
 	[SerializeField] GameObject m_base = null;
+    [SerializeField] [Range(-180.0f, 180.0f)] float m_angle = 0;
 
-	public Segment[] m_segments = null;
+    public Segment[] m_segments = null;
 
 	void Awake()
 	{
@@ -32,7 +33,16 @@ public class IK : MonoBehaviour
             if (m_target == null)
                 target = m_segments[i].start;
 
-            m_segments[i].Follow(target);
+            float prevAngle = 0.0f;
+            if (i < m_segments.Length - 1)
+            {
+                //Vector3 direction = m_segments[i + 1].transform.position - m_segments[i].transform.position;
+                //Vector3 dir = m_segments[i + 1].transform.rotation * (Vector3.right * 5.0f);
+                //Debug.DrawLine(m_segments[i + 1].transform.position, m_segments[i + 1].transform.position + dir, Color.red);
+                //Debug.DrawLine(m_segments[i].transform.position, m_segments[i].transform.position + direction * 10.0f, Color.blue);
+                //prevAngle = Vector3.Angle(dir, direction);
+            }
+            m_segments[i].Follow(target, m_angle, prevAngle);
         }
 
         if (m_base)
